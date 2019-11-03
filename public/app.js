@@ -9,7 +9,7 @@ $("#scrape-btn").on("click", function() {
     })
 });
 
-//SAVE ARTICLE
+//SAVE ARTICL
 $(".save").on("click", function() {
     var thisId = $(this).attr("data-id");
     $.ajax({

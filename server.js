@@ -14,7 +14,7 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 //Port
-var PORT = process.env.PORT || 3030
+var PORT = process.env.PORT || 3000
 
 // Initialize Express
 var app = express();
@@ -130,7 +130,7 @@ app.get("/articles/:id", function (req, res) {
     Article.findOne({ "_id": req.params.id })
         //Populate note
         .populate("note")
-        /////////////////////?????ASK MATT ABOUT .then vs .exec????
+        //////////////ASK ABOUT .then vs .exec????
         .exec(function (error, data) {
             // Log any errors
             if (error) {
